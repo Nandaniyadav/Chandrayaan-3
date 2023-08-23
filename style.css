@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --shadow: 0 0 20px #000 inset;
+}
+
+body {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.bg {
+    position: absolute;
+    height: 100vh;
+    z-index: -2;
+    object-fit: cover;
+    filter: brightness(0.4);
+
+}
+
+.rocket {
+    position: relative;
+    height: 320px;
+    width: 50px;
+    background: #fff;
+    box-shadow: var(--shadow);
+
+}
+
+.rocket::before {
+    position: absolute;
+    content: '';
+    bottom: -7%;
+    left: 0;
+    height: 120px;
+    width: 50px;
+    background: #fff;
+    border-bottom-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+    box-shadow: var(--shadow);
+    z-index: -1;
+}
+
+.left-booster,
+.right-booster {
+    position: absolute;
+    height: calc(90% - 20px);
+    width: 40px;
+    bottom: 0;
+    background: #fff;
+    box-shadow: var(--shadow);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #222;
+}
+
+.left-booster {
+    left: calc(-90% + 2px);
+    border-top-left-radius: 80px;
+    border-top-right-radius: 8px;
+}
+
+.right-booster {
+    left: calc(100% + 3px);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 80px;
+
+}
+
+.left-booster::before,
+.right-booster::before {
+    position: absolute;
+    content: '';
+    height: 40px;
+    width: 40px;
+    bottom: -10.5%;
+    background-image: conic-gradient(from 45deg, #fff 0deg 180deg, #222 180deg 360deg);
+    rotate: -135deg;
+    box-shadow: var(--shadow);
+    z-index: -1;
+}
+
+.payload {
+    position: absolute;
+    height: 120px;
+    width: 60px;
+    top: -35%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 20%;
+    border-bottom-right-radius: 20%;
+    box-shadow: var(--shadow);
+}
+
+.rocket i {
+    position: absolute;
+    width: 100%;
+    background: #000;
+}
+
+.bold {
+    position: absolute;
+    top: 14px;
+    height: 66px;
+    width: 100%;
+    background: #555;
+    box-shadow: 10px 0 10px #0007 inset,
+        -10px 0 10px #0007 inseet;
+}
+
+.flag {
+    position: absolute;
+    height: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.Ashokastambh {
+    position: absolute;
+    height: 20px;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+
+.isrologo {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+
+}
+
+.text {
+    position: absolute;
+    top: 42%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 0.5rem;
+    font-weight: 900;
+}
+
+.boosterfire {
+    position: absolute;
+    bottom: -35%;
+    width: 140px;
+    rotate: 180deg;
+    z-index: 2;
+    mix-blend-mode: screen;
+}
+
+.fire {
+    position: absolute;
+    bottom: 15%;
+    width: 100px;
+    rotate: 180deg;
+    mix-blend-mode: screen;
+    z-index: -2;
+}
